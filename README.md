@@ -5,8 +5,15 @@ It acts as a safety mechanism to prevent sloppy implementations, encouraging the
 
 ## Install
 
-Copy or symlink `CLAUDE.md` to your workspace root (or `~/.claude/CLAUDE.md`).
-Copy or symlink selected skills into `~/.claude/skills/`.
+1. Copy or symlink `CLAUDE.md` to your workspace root (or `~/.claude/CLAUDE.md`).
+2. Copy or symlink selected skills into `~/.claude/skills/`.
+3. Bootstrap the prerequisite directory structure in your target repository:
+
+   ```bash
+   bash scripts/init.sh /path/to/your/repo
+   ```
+
+   This creates `agents/tasks/{lessons.md,lessons.template.md,active/}`, `docs/README.md`, and the necessary `.gitignore` entries — all referenced by `CLAUDE.md` and various skills. The script is idempotent and never overwrites existing files.
 
 ## Philosophy
 
