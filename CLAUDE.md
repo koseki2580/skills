@@ -123,17 +123,15 @@ Before implementing:
 
 ---
 
-### 9. Docs–Tests Consistency
+### 9. Tests Are Required
 
-- When updating specifications in `docs/`, ensure corresponding test cases are updated if applicable.
+**Tests are mandatory, not optional.**
 
-- Tests are the executable representation of the specification:
-  - If docs change, tests MUST reflect that change
-  - If tests no longer match docs, they MUST be updated immediately
-
-- Keep intended behavior (specs/docs), validated behavior (tests), and actual behavior (code) consistent.
-
-- **If available and appropriate, consider using the `test-driven-development` skill** when implementing any feature or bugfix, before writing implementation code.
+- **New features ship with tests.** A feature without tests is not done.
+- **Bug fixes follow TDD:** write a failing test that reproduces the bug first, then fix the code, then confirm it passes. Never fix first and add a test afterwards.
+- **Test behavior, not implementation.** Assert on outcomes the caller observes, not on internal call sequences, private helpers, or mock invocations. See the `test-driven-development` skill for the full rule and worked examples.
+- **Docs–tests consistency:** Tests are the executable representation of the specification. If `docs/` changes, tests MUST reflect that change. If tests no longer match docs, they MUST be updated immediately. Keep intended behavior (specs/docs), validated behavior (tests), and actual behavior (code) consistent.
+- **Use the `test-driven-development` skill** for any non-trivial feature or bugfix before writing implementation code.
 
 ---
 
