@@ -18,7 +18,6 @@ Copy or symlink selected skills into `~/.claude/skills/`.
 | Category       | Skill                            | Use when                                              |
 |----------------|----------------------------------|-------------------------------------------------------|
 | **debugging**  | `systematic-debugging`           | bug, test failure, unexpected behavior                |
-|                | `diagnose`                       | disciplined diagnosis for hard bugs and regressions   |
 | **implementation** | `test-driven-development`    | before writing implementation code                    |
 |                | `writing-plans`                  | multi-step implementation planning                    |
 |                | `executing-plans`                | executing a written implementation plan               |
