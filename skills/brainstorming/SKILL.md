@@ -1,6 +1,6 @@
 ---
 name: brainstorming
-description: Use for ambiguous, user-facing, architectural, or multi-component feature design.
+description: Use before any creative work — creating features, building components, adding functionality, modifying behavior, or stress-testing an existing plan/design. Explores user intent, requirements, and design before implementation.
 ---
 
 # Brainstorming Ideas Into Designs
@@ -8,7 +8,9 @@ description: Use for ambiguous, user-facing, architectural, or multi-component f
 Help turn ideas into fully formed designs and specs through natural collaborative dialogue.
 
 **When to use:**
+- Before any creative work: creating features, building components, adding functionality, or modifying behavior.
 - Ambiguous, user-facing, architectural, or multi-component feature design.
+- Stress-testing an existing plan or design (see "Stress-Testing Mode" below).
 - **Do not use** for obvious small changes, bug fixes with clear reproduction, or implementation tasks already covered by an existing spec.
 
 Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design and get user approval.
@@ -117,6 +119,16 @@ Wait for the user's response. If they request changes, make them and re-run the 
 
 - Invoke the writing-plans skill to create a detailed implementation plan
 - Do NOT invoke any other skill. writing-plans is the next step.
+
+## Stress-Testing Mode
+
+When the user already has a plan, spec, or design and wants it **interrogated** rather than designed from scratch (e.g. "stress-test this", "grill me on this plan", "challenge my design"):
+
+- Walk down each branch of the decision tree, resolving dependencies between decisions one-by-one.
+- For each question, **provide your recommended answer with reasoning** — don't ask blind.
+- If a question can be answered by exploring the codebase, explore the codebase instead of asking.
+- Ask one question at a time. Wait for the answer before moving on.
+- The goal is shared understanding, not a fresh design — skip the "Propose 2-3 approaches" and "Write design doc" steps unless the stress-test surfaces enough divergence that a fresh design pass is warranted.
 
 ## Key Principles
 
