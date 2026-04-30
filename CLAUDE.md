@@ -21,6 +21,7 @@
     - executing infrastructure changes (e.g., `terraform apply` or `kubectl apply`)
     - implementing a plan with unresolved tradeoffs
     - proceeding after discovering scope expansion or conflicting requirements
+  - **Approval format:** Wait for an explicit affirmative from the user (e.g., "approve", "ok", "go", "yes", "進めて") before proceeding past a gate. Do **not** treat continuation messages, follow-up questions, related comments, or silence as approval. If the next user message does not clearly authorize the gated action, restate the gate and ask again rather than inferring consent.
 
 ---
 
