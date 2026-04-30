@@ -184,6 +184,15 @@ Use a structured format like HFS (Hypothesis, Findings, Solution) for clarity:
 - **Findings**: Issues encountered, log outputs, and learnings during execution.
 - **Solution / Summary**: What was actually implemented, how it was verified, and the final extracted text for the PR description.
 
+**Progress Cadence**
+For tasks that span more than a handful of tool calls, post a brief progress note when:
+
+- A meaningful sub-step completes (e.g., plan written, first failing test in place, refactor done, all tests green).
+- Direction changes (a hypothesis is invalidated, scope shifts, a blocker is discovered).
+- Just before a long-running, expensive, or hard-to-reverse operation begins.
+
+One sentence is usually enough. Silence during multi-step work makes it hard for the user to course-correct early — keep them in the loop without narrating every tool call.
+
 **Resume Safety**
 For standard or comprehensive tasks, the task file must be sufficient to resume work after context loss. Keep it updated with:
 
