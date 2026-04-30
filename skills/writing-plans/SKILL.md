@@ -1,6 +1,6 @@
 ---
 name: writing-plans
-description: Use when you have a spec or requirements for a multi-step task, before touching code
+description: Use before touching code on non-trivial tasks involving 3 or more meaningful implementation steps, risky changes, or architectural decisions. Requires a spec or requirements as input.
 ---
 
 # Writing Plans
