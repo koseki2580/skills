@@ -5,6 +5,7 @@
 - **Minimal** (Trivial changes, typos, formatting-only changes, small internal refactors, or obvious one-line fixes):
   - Answer or edit directly while preserving **Simplicity First**, **Surgical Changes**, and **Validation Before Completion**.
   - Use direct verification. Use a short plan only if helpful. Do not invoke skills, sub-agents, or documentation workflows unless strictly necessary.
+  - **User-facing micro-changes stay Minimal** when only surface text changes and the behavior contract is unchanged (e.g., error message wording, log strings, microcopy). The moment behavior, public API shape, schema, or operational semantics change — even by one field — escalate to Standard and apply Section 8 (Specification-Driven Development).
 
 - **Standard** (Normal feature, non-trivial bugfix, or meaningful multi-file change):
   - Check `agents/tasks/lessons.md` before implementation when useful.
