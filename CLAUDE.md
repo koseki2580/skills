@@ -247,6 +247,13 @@ When your changes create orphans:
 - Don't remove pre-existing dead code unless asked.
 - The test: Every changed line should trace directly to the user's request.
 
+**Reuse before adding (dependency policy):**
+
+- Before introducing a new dependency, helper, abstraction, or module, search `docs/`, `src/`, and the project's equivalent locations for an existing solution and reuse it.
+- If existing code genuinely cannot solve the problem, **propose** the new dependency or module to the user with rationale before installing or scaffolding — do not add it unilaterally.
+- Treat any new third-party module as a security surface. Before proposing it, check: maintenance status (last release, open critical issues), license compatibility, install size and transitive dependencies, and whether the standard library or an already-installed package can do the job.
+- Pin versions explicitly. Never silently widen a version range to pull in something new.
+
 ### Quality
 
 - **No Shortcuts**: Identify the root cause. Avoid temporary fixes. Maintain senior-level quality.
