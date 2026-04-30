@@ -49,6 +49,94 @@ Write code before the test? Delete it. Start over.
 
 Implement fresh from tests. Period.
 
+## Behavior, Not Implementation
+
+Tests describe **what the code should do**, not **how it does it**.
+
+**Assert on observable outcomes:**
+
+- Return values
+- Persisted state (DB rows, files written, queue messages)
+- Emitted events / outbound calls at system boundaries
+- Rendered output / HTTP responses
+- Errors raised to the caller
+
+**Do NOT assert on:**
+
+- Which private helpers got called
+- The order of internal method invocations
+- Mock call counts when they only prove "the code took this internal path"
+- SQL strings, cache keys, or other implementation choices that could change in a refactor
+
+**The refactor test:** A test is testing behavior if you can rewrite the implementation — different helpers, different structure, different libraries — and the test still passes unchanged. If a behavior-preserving refactor breaks the test, the test was testing implementation.
+
+<Good>
+```typescript
+test('returns the user when found', async () => {
+  await db.users.insert({ id: 1, name: 'Alice' });
+
+  const result = await getUser(1);
+
+  expect(result).toEqual({ id: 1, name: 'Alice' });
+});
+```
+Asserts on the outcome. Cache strategy, query shape, ORM choice can all change without touching this test.
+</Good>
+
+<Bad>
+```typescript
+test('returns the user when found', async () => {
+  const dbSpy = jest.spyOn(db, 'query');
+  const cacheSpy = jest.spyOn(cache, 'get');
+
+  await getUser(1);
+
+  expect(cacheSpy).toHaveBeenCalledBefore(dbSpy);
+  expect(dbSpy).toHaveBeenCalledWith('SELECT * FROM users WHERE id = ?', [1]);
+});
+```
+Locks in cache-then-DB order and exact SQL. A behavior-preserving refactor (new ORM, added read replica, different cache key) breaks this test for no real reason.
+</Bad>
+
+<Good>
+```typescript
+test('charges the customer when checkout succeeds', async () => {
+  const order = await checkout({ userId: 'u1', items: [...] });
+
+  expect(order.status).toBe('paid');
+  expect(await payments.findByOrder(order.id)).toMatchObject({ amount: 4200 });
+});
+```
+Verifies the externally observable effect (order paid, payment record created at the boundary).
+</Good>
+
+<Bad>
+```typescript
+test('charges the customer when checkout succeeds', async () => {
+  const stripeMock = jest.spyOn(stripe, 'createCharge');
+  const loggerMock = jest.spyOn(logger, 'info');
+
+  await checkout({ userId: 'u1', items: [...] });
+
+  expect(stripeMock).toHaveBeenCalledTimes(1);
+  expect(loggerMock).toHaveBeenCalledWith('charge.created');
+});
+```
+Tests that Stripe was called once and a log line was written — both are implementation details. Switching payment provider or removing the log breaks the test even though the user-visible behavior (got charged) is identical.
+</Bad>
+
+### Gate Function
+
+```
+BEFORE writing an assertion, ask:
+  "If a teammate refactored this internally without changing what
+   callers observe, would my assertion still pass?"
+
+  IF no:
+    The assertion is testing implementation. Rewrite to assert on
+    the outcome the caller actually sees.
+```
+
 ## Red-Green-Refactor
 
 ```mermaid
