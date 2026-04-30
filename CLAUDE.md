@@ -228,6 +228,12 @@ Proceed only after the ambiguity is resolved or an explicit assumption is accept
 
 **Touch only what you must. Clean up only your own mess.**
 
+**Read before edit:**
+
+- Read the full target file before editing it. Do not edit on the basis of a partial view.
+- For non-trivial edits, also read direct callers, importers, and any tests that exercise the symbol you are changing. If the change crosses a public boundary, scan for all usages.
+- If the file is too large to read whole, read the surrounding region plus every site that references the symbol you are touching.
+
 When editing existing code:
 
 - Don't "improve" adjacent code, comments, or formatting.
