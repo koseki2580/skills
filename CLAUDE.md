@@ -89,6 +89,7 @@ Before implementing:
 - When necessary, review the diff between the main branch and your changes
 - Ask yourself: “Would a staff engineer approve this?”
 - Run tests, check logs, and demonstrate that everything works correctly
+- **If available and appropriate, consider using the `implementation-review-orchestration` skill** for in-progress mid-implementation review on Standard / Comprehensive tasks once implementation reaches a meaningful checkpoint, before final verification.
 - **If available and appropriate, consider using the `verification-before-completion` skill** when about to claim work is complete, fixed, or passing, to strictly run verification commands.
 
 ---
