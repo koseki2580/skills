@@ -1,3 +1,5 @@
 # AI Agent local active tasks
 agents/tasks/active/
+# Human-facing interactive plan artifacts (per-task, transient)
+agents/human/
 .DS_Store
