@@ -55,8 +55,9 @@ Before implementing:
 
 **Plan-first rule for implementations and fixes:**
 
-- For any implementation or modification, you MUST write a plan and obtain explicit user approval before starting the work.
-- For investigations or trivial fixes (typos, formatting-only changes), a plan is not required.
+- For **Standard** or **Comprehensive** implementation work, write a plan before starting.
+- For **Minimal** changes, state the intended edit briefly and proceed without a separate plan artifact unless risk or ambiguity appears.
+- **Explicit user approval** is required only when the plan changes scope, affects risky areas, public APIs, data models, security, infrastructure, or has meaningful ambiguity.
 
 **Plan artifacts — two formats, two audiences:**
 
