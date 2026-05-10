@@ -61,7 +61,7 @@ Before implementing:
 **Plan artifacts — two formats, two audiences:**
 
 - **`agents/tasks/active/<task-name>.md`** — the canonical Markdown plan that Claude works from. Written in **English** and follows the existing task-file convention.
-- **`agents/human/<task-name>.html`** — a human-facing companion of the same plan, authored as a **single interactive HTML file** optimized for visibility and readability (clear sections, collapsible details, syntax-highlighted code blocks, etc.). Infer the user's native language from the language of their request and author the HTML in that language.
+- **`agents/human/<task-name>.html`** — a human-facing companion of the same plan, authored as a **single richly interactive HTML file** that makes the change concrete and visible. Show **the current state and the post-implementation state** so the human can see exactly what will change and what the desired outcome looks like. Make active use of **JavaScript, CSS, Mermaid, and SVG** to convey this — for example, before/after diff panels, animated or toggle-able diagrams, interactive flowcharts (Mermaid), illustrative SVG visuals, collapsible details, and syntax-highlighted code blocks. Infer the user's native language from the language of their request and author the HTML in that language.
 - When implementing, reference the HTML file as needed to stay aligned with what the human approved.
 
 ---
