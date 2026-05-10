@@ -217,6 +217,8 @@ You MUST complete each phase before proceeding to the next.
 
    This is NOT a failed hypothesis - this is a wrong architecture.
 
+   **OR: invoke `fishbone-analysis` to re-expand the cause space.** When repeated fixes keep surfacing new problems in different places, the original cause enumeration was likely too narrow. fishbone-analysis re-expands across structurally independent perspectives (Code / Data / Infra / Process / Human / External) before any further verification. Hand its `adopted_hypotheses[]` back into Phase 3 of this skill.
+
 ## Red Flags - STOP and Follow Process
 
 If you catch yourself thinking:
@@ -294,6 +296,7 @@ These techniques are part of systematic debugging and available in this director
 
 - **test-driven-development** - For creating failing test case (Phase 4, Step 1)
 - **verification-before-completion** - Verify fix worked before claiming success
+- **fishbone-analysis** - Widen the cause space across multiple perspectives when 3+ fixes fail (Phase 4, Step 5)
 
 ## Real-World Impact
 

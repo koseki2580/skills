@@ -12,6 +12,7 @@ Help turn ideas into fully formed designs and specs through natural collaborativ
 - Ambiguous, user-facing, architectural, or multi-component feature design.
 - Stress-testing an existing plan or design (see "Stress-Testing Mode" below).
 - **Do not use** for obvious small changes, bug fixes with clear reproduction, or implementation tasks already covered by an existing spec.
+- **For diagnosing why an existing system is failing**, use `fishbone-analysis` first to enumerate the cause space across multiple perspectives. Return here only if a redesign is warranted.
 
 Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design and get user approval.
 

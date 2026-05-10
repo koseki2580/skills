@@ -22,29 +22,30 @@ It acts as a safety mechanism to prevent sloppy implementations, encouraging the
 
 ## Skills Directory
 
-| Category               | Skill                                   | Use when                                              |
-|------------------------|-----------------------------------------|-------------------------------------------------------|
-| **debugging**          | `systematic-debugging`                  | bug, test failure, unexpected behavior                |
-| **implementation**     | `test-driven-development`               | before writing implementation code                    |
-|                        | `writing-plans`                         | multi-step implementation planning                    |
-|                        | `executing-plans`                       | executing a written implementation plan               |
-|                        | `verification-before-completion`        | before claiming work is complete                      |
-|                        | `brainstorming`                         | ambiguous, structural, or multi-component design      |
-| **review**             | `requesting-code-review`                | before merging to verify work meets requirements      |
-|                        | `receiving-code-review`                 | processing review feedback                            |
-| **multi-agent review** | `review-orchestration`                  | orchestrating PR review across specialist subagents   |
-|                        | `implementation-review-orchestration`   | orchestrating in-progress code review                 |
-|                        | `create-pr-comment`                     | posting PR comments (GitHub / Bitbucket)              |
-|                        | `review-dynamic-validation`             | executing tests/lint/typecheck during review          |
-|                        | `review-learning-loop`                  | learning from past comment outcomes                   |
-|                        | `interactive-review-dialogue`           | re-evaluating after author replies                    |
-|                        | `review-reference-creation`             | creating team-specific review references              |
-|                        | `review-reference-maintenance`          | maintaining team-specific review references           |
-| **repo-ops**           | `commit-message-convention`             | creating commits                                      |
-|                        | `finishing-a-development-branch`        | integrating completed work                            |
-|                        | `using-git-worktrees`                   | starting isolated feature work                        |
-| **meta**               | `writing-skills`                        | creating or editing skills                            |
-|                        | `using-skills`                          | determining when to invoke a skill                    |
+| Category               | Skill                                 | Use when                                            |
+| ---------------------- | ------------------------------------- | --------------------------------------------------- |
+| **debugging**          | `systematic-debugging`                | bug, test failure, unexpected behavior              |
+|                        | `fishbone-analysis`                   | cause is unclear or scattered across perspectives   |
+| **implementation**     | `test-driven-development`             | before writing implementation code                  |
+|                        | `writing-plans`                       | multi-step implementation planning                  |
+|                        | `executing-plans`                     | executing a written implementation plan             |
+|                        | `verification-before-completion`      | before claiming work is complete                    |
+|                        | `brainstorming`                       | ambiguous, structural, or multi-component design    |
+| **review**             | `requesting-code-review`              | before merging to verify work meets requirements    |
+|                        | `receiving-code-review`               | processing review feedback                          |
+| **multi-agent review** | `review-orchestration`                | orchestrating PR review across specialist subagents |
+|                        | `implementation-review-orchestration` | orchestrating in-progress code review               |
+|                        | `create-pr-comment`                   | posting PR comments (GitHub / Bitbucket)            |
+|                        | `review-dynamic-validation`           | executing tests/lint/typecheck during review        |
+|                        | `review-learning-loop`                | learning from past comment outcomes                 |
+|                        | `interactive-review-dialogue`         | re-evaluating after author replies                  |
+|                        | `review-reference-creation`           | creating team-specific review references            |
+|                        | `review-reference-maintenance`        | maintaining team-specific review references         |
+| **repo-ops**           | `commit-message-convention`           | creating commits                                    |
+|                        | `finishing-a-development-branch`      | integrating completed work                          |
+|                        | `using-git-worktrees`                 | starting isolated feature work                      |
+| **meta**               | `writing-skills`                      | creating or editing skills                          |
+|                        | `using-skills`                        | determining when to invoke a skill                  |
 
 *See individual directories in `skills/` for more specialized workflows.*
 
@@ -77,7 +78,9 @@ This repository includes a multi-agent code review orchestration system that pro
 - Any new capability added on one side must be mirrored on the other side, or the one-sided exception must be documented.
 
 ## References
+
 - [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)
 - [mattpocock/skills](https://github.com/mattpocock/skills)
 - [obra/superpowers](https://github.com/obra/superpowers)
 - [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows)
+
