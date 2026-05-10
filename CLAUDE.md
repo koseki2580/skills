@@ -64,6 +64,26 @@ Before implementing:
 - **`agents/human/<task-name>.html`** — a human-facing companion of the same plan, authored as a **single richly interactive HTML file** that makes the change concrete and visible. Show **the current state and the post-implementation state** so the human can see exactly what will change and what the desired outcome looks like. Make active use of **JavaScript, CSS, Mermaid, and SVG** to convey this — for example, before/after diff panels, animated or toggle-able diagrams, interactive flowcharts (Mermaid), illustrative SVG visuals, collapsible details, and syntax-highlighted code blocks. Infer the user's native language from the language of their request and author the HTML in that language.
 - When implementing, reference the HTML file as needed to stay aligned with what the human approved.
 
+**HTML plan checklist — the file MUST satisfy at minimum:**
+
+- **Hero**: one-line goal stating what changes by the end.
+- **Why now**: concrete evidence of the current pain — actual file paths, error output, screenshots, or numbers. No vague "currently we can't ..." paragraphs.
+- **Before / After concrete comparison**: pick at least one form and show the **artifact itself**, not a description of it:
+  - file tree diff (+/- colored), code diff (syntax-highlighted before vs after), command/output diff, UI mockup or screenshot pair, schema or data-model diff, paired Mermaid diagrams, configuration diff.
+- **Flow / structure visualization**: at least one Mermaid diagram (preferred) or animated/labeled SVG showing the change in process, dependencies, or state.
+- **Stepwise plan**: each step paired with a **verifiable** check.
+- **Risks & out-of-scope**: what could break and what is intentionally NOT done.
+- **At least one real interactivity affordance**: tab/toggle between before↔after, hover/click reveal, animated transition, or a playable demo. A bare `<details>` collapsible does not count.
+
+**Anti-patterns (do not):**
+
+- Do NOT write "Now: ... / After: ..." paragraphs that only describe the change. Show the concrete artifact.
+- Do NOT list bullet points where a diagram or diff would convey the same thing more directly.
+- Do NOT ship a page that is essentially Markdown rendered as HTML with cards.
+- Do NOT hand-draw SVG when Mermaid can express the same diagram.
+
+**Smell test:** A reviewer who does not know the codebase opens the HTML and can answer (1) what is broken/missing now, (2) what will be concretely different after, (3) how they will know it worked. If any answer is unclear, redo the HTML.
+
 ---
 
 ### 3. Sub-Agent Strategy
