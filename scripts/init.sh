@@ -61,6 +61,16 @@ if [[ ! -f agents/tasks/active/.gitkeep ]]; then
 fi
 
 # ----------------------------------------------------------------------------
+# agents/human/  — human-facing interactive HTML plan artifacts
+# ----------------------------------------------------------------------------
+mkdir -p agents/human
+
+if [[ ! -f agents/human/.gitkeep ]]; then
+  touch agents/human/.gitkeep
+  note "agents/human/.gitkeep"
+fi
+
+# ----------------------------------------------------------------------------
 # docs/  — specifications and design docs
 # ----------------------------------------------------------------------------
 mkdir -p docs/skills/specs
@@ -112,6 +122,8 @@ ensure_gitignore() {
 
 ensure_gitignore "agents/tasks/active/*"
 ensure_gitignore "!agents/tasks/active/.gitkeep"
+ensure_gitignore "agents/human/*"
+ensure_gitignore "!agents/human/.gitkeep"
 
 # ----------------------------------------------------------------------------
 echo ""
