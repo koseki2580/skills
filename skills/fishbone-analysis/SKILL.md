@@ -1,6 +1,6 @@
 ---
 name: fishbone-analysis
-description: Use when a user reports a problem, defect, or unexplained behavior whose causes are unclear or scattered, and the cause space must be enumerated across multiple perspectives before convergence. Also invokable from systematic-debugging when 3+ fixes have failed (Phase 4.5), or from brainstorming when an existing system's failure space must be widened before redesign.
+description: Use when a user reports a problem, defect, or unexplained behavior whose causes are unclear or scattered, and the cause space must be enumerated across multiple perspectives before convergence. Also invokable from systematic-debugging when 3+ fixes have failed (Phase 4, step 5), or from brainstorming when an existing system's failure space must be widened before redesign.
 ---
 
 # Fishbone Analysis
@@ -14,7 +14,7 @@ This skill widens the cause space first, then yields adopted hypotheses for veri
 ## When to Use
 
 - A user reports a symptom whose cause is unclear or could live in several places
-- `systematic-debugging` has tried 3+ fixes and reached Phase 4.5 (architectural question)
+- `systematic-debugging` has tried 3+ fixes and reached Phase 4 step 5 (architectural question)
 - `brainstorming` needs to widen an existing system's failure space before redesign
 - Pre-postmortem cause enumeration
 
@@ -121,7 +121,7 @@ flowchart LR
   P[Symptom report] --> D{Single hypothesis ready?}
   D -- yes --> SD[systematic-debugging]
   D -- no --> FB[fishbone-analysis]
-  SD -- 3+ failures / Phase 4.5 --> FB
+  SD -- 3+ failures / Phase 4 step 5 --> FB
   FB -- adopted_hypotheses --> SD
   BS[brainstorming] -- needs failure space --> FB
   FB -- narrowed candidates --> BS
