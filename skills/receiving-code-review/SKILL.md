@@ -88,7 +88,7 @@ IF conflicts with your human partner's prior decisions:
   Stop and discuss with your human partner first
 ```
 
-**your human partner's rule:** "External feedback - be skeptical, but check carefully"
+**Principle:** External feedback — be skeptical, but check carefully.
 
 ## YAGNI Check for "Professional" Features
 
@@ -100,7 +100,7 @@ IF reviewer suggests "implementing properly":
   IF used: Then implement properly
 ```
 
-**your human partner's rule:** "You and reviewer both report to me. If we don't need this feature, don't add it."
+**Principle:** If the feature isn't needed, don't add it — even if a reviewer asks for it.
 
 ## Implementation Order
 
@@ -132,8 +132,6 @@ Push back when:
 - Ask specific questions
 - Reference working tests/code
 - Involve your human partner if architectural
-
-**Signal if uncomfortable pushing back out loud:** "Strange things are afoot at the Circle K"
 
 ## Acknowledging Correct Feedback
 
