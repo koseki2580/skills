@@ -392,4 +392,3 @@ Tests pass once ≠ bulletproof.
 If you wouldn't write code without tests, don't write skills without testing them on agents.
 
 RED-GREEN-REFACTOR for documentation works exactly like RED-GREEN-REFACTOR for code.
-

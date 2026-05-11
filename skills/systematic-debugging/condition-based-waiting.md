@@ -103,4 +103,3 @@ await new Promise((r) => setTimeout(r, 200)); // Then: wait for timed behavior
 1. First wait for triggering condition
 2. Based on known timing (not guessing)
 3. Comment explaining WHY
-
