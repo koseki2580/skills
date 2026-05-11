@@ -298,11 +298,3 @@ These techniques are part of systematic debugging and available in this director
 - **verification-before-completion** - Verify fix worked before claiming success
 - **fishbone-analysis** - Widen the cause space across multiple perspectives when 3+ fixes fail (Phase 4, Step 5)
 
-## Real-World Impact
-
-From debugging sessions:
-
-- Systematic approach: 15-30 minutes to fix
-- Random fixes approach: 2-3 hours of thrashing
-- First-time fix rate: 95% vs 40%
-- New bugs introduced: Near zero vs common
