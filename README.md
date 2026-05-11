@@ -29,8 +29,11 @@ It acts as a safety mechanism to prevent sloppy implementations, encouraging the
 | **implementation**     | `test-driven-development`             | before writing implementation code                  |
 |                        | `writing-plans`                       | multi-step implementation planning                  |
 |                        | `executing-plans`                     | executing a written implementation plan             |
+|                        | `subagent-driven-development`         | executing a plan with independent tasks in-session  |
+|                        | `dispatching-parallel-agents`         | 2+ independent tasks with no shared state           |
 |                        | `verification-before-completion`      | before claiming work is complete                    |
 |                        | `brainstorming`                       | ambiguous, structural, or multi-component design    |
+|                        | `improve-codebase-architecture`       | refactor or deepen shallow modules                  |
 | **review**             | `requesting-code-review`              | before merging to verify work meets requirements    |
 |                        | `receiving-code-review`               | processing review feedback                          |
 | **multi-agent review** | `review-orchestration`                | orchestrating PR review across specialist subagents |
