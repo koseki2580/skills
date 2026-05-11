@@ -1,6 +1,6 @@
 ---
 name: review-orchestration
-description: Used when the main agent for PR review selects and runs PR review agents, then aggregates each agent's posted-comment summary into a final summary comment.
+description: Use when the main agent for PR review selects and runs PR review agents, then aggregates each agent's posted-comment summary into a final summary comment.
 ---
 
 # PR Review Orchestration

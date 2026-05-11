@@ -1,6 +1,6 @@
 ---
 name: review-reference-maintenance
-description: Used to periodically review past-review references from team leads or experienced reviewers and reorganize their active/candidate/deprecated status
+description: Use to periodically review past-review references from team leads or experienced reviewers and reorganize their active/candidate/deprecated status
 ---
 
 # Review Reference Maintenance

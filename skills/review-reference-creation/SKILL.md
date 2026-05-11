@@ -1,6 +1,6 @@
 ---
 name: review-reference-creation
-description: Used when creating a reusable past-review reference from a TL or experienced reviewer based on a pull request URL, review comments, the reviewed code, and the fix
+description: Use when creating a reusable past-review reference from a TL or experienced reviewer based on a pull request URL, review comments, the reviewed code, and the fix
 ---
 
 # Review Reference Creation

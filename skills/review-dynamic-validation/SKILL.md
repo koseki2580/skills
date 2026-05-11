@@ -1,6 +1,6 @@
 ---
 name: review-dynamic-validation
-description: Used during PR reviews or implementation-time reviews when you want to produce evidence by running locally available verification commands, not only by reading CI results
+description: Use during PR reviews or implementation-time reviews when you want to produce evidence by running locally available verification commands, not only by reading CI results
 ---
 
 # Review Dynamic Validation

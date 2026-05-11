@@ -1,6 +1,6 @@
 ---
 name: review-learning-loop
-description: Used to collect outcomes (resolved/dismissed/accepted/ignored) of posted review comments and feed them into false-positive reduction or team-lead reference updates
+description: Use to collect outcomes (resolved/dismissed/accepted/ignored) of posted review comments and feed them into false-positive reduction or team-lead reference updates
 ---
 
 # Review Learning Loop
