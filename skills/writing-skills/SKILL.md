@@ -144,11 +144,9 @@ Link to file for heavy reference or reusable tools
 ## Common Mistakes
 
 What goes wrong + fixes
-
-## Real-World Impact (optional)
-
-Concrete results
 ```
+
+**Do NOT add a "Real-World Impact" section with session-specific anecdotes or unsourced statistics.** Past iterations of this template suggested such a section; in practice it became a magnet for dated diary entries ("From debugging session 2025-XX-XX:") and fabricated metrics ("First-time fix rate: 95% vs 40%") that undercut the skill's authority. If a skill genuinely needs to show impact, link to a permanent reference (a published post-mortem, a benchmark file, etc.), not a one-off session log.
 
 ## Claude Search Optimization (CSO)
 
