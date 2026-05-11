@@ -11,7 +11,7 @@ Write the test first. Watch it fail. Write minimal code to pass.
 
 **Core principle:** If you didn't watch the test fail, you don't know if it tests the right thing.
 
-**TOOL EXECUTION MANDATE:** You MUST use the `run_in_terminal`, `create_and_run_task`, or `runTests` tools to execute your tests. Do not just output testing code and wait for the user to run it. You are responsible for test execution.
+**TOOL EXECUTION MANDATE:** You MUST execute your tests with whatever terminal/shell or test-runner tool the host harness exposes (e.g. `Bash` in Claude Code, `run_in_terminal` / `create_and_run_task` / `runTests` in VSCode Copilot). Do not just output testing code and wait for the user to run it. You are responsible for test execution.
 
 **Violating the letter of the rules is violating the spirit of the rules.**
 

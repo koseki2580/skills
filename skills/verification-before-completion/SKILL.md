@@ -11,7 +11,7 @@ Claiming work is complete without verification is dishonesty, not efficiency.
 
 **Core principle:** Evidence before claims, always.
 
-**TOOL EXECUTION MANDATE:** You MUST use the `run_in_terminal` or `create_and_run_task` tools to actually execute these verification commands. Do not just write bash code blocks and assume the user will run them.
+**TOOL EXECUTION MANDATE:** You MUST actually execute these verification commands with whatever terminal/shell tool the host harness exposes (e.g. `Bash` in Claude Code, `run_in_terminal` in VSCode Copilot). Do not just write bash code blocks and assume the user will run them.
 
 **Violating the letter of this rule is violating the spirit of this rule.**
 
