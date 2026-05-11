@@ -239,7 +239,7 @@ If you catch yourself thinking:
 
 **If 3+ fixes failed:** Question the architecture (see Phase 4, step 5)
 
-## your human partner's Signals You're Doing It Wrong
+## User Signals You're Doing It Wrong
 
 **Watch for these redirections:**
 
