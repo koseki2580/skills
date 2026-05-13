@@ -85,6 +85,25 @@ Before implementing:
 
 **Smell test:** A reviewer who does not know the codebase opens the HTML and can answer (1) what is broken/missing now, (2) what will be concretely different after, (3) how they will know it worked. If any answer is unclear, redo the HTML.
 
+**Inline commenting overlay — when an HTML companion is authored, embed the overlay so the reviewer can comment in-browser:**
+
+- Read `~/.claude/assets/plan-comments.js` and inline its full contents inside a `<script>...</script>` block at the end of `<body>`. Do NOT use `<script src="...">` — the plan must be a self-contained file the reviewer can share or open from anywhere.
+- Give every commentable element an `id` so anchors are stable in exported feedback. Naming convention:
+  - `id="section-<kebab>"` — top-level sections (overview, before-after, risks, out-of-scope, ...)
+  - `id="diff-<n>"` — each code/diff block (`diff-1`, `diff-2`, ...)
+  - `id="step-<n>"` — each stepwise plan item (`step-1`, `step-2`, ...)
+  - `id="risk-<kebab>"` — each risk callout (`risk-token-leak`, `risk-rollback`, ...)
+- The reviewer adds comments by selecting text or clicking the 💬 icon on an anchored element. The bottom-right panel exposes **Copy as Markdown** and **Download JSON**.
+
+**Reading reviewer comments back:** The Markdown export produced by the overlay is a three-layer record per comment — `### [#anchor]` / optional `— selection: "..."` / comment body. Example:
+
+```markdown
+### [#step-3] — selection: "verify: e2e green"
+このverifyだとどのe2eテストが対象か分からない。
+```
+
+Treat the anchor (`#step-3`) as authoritative for locating context in the plan; the selection text disambiguates within long anchors; the body is the actual feedback.
+
 ---
 
 ### 3. Sub-Agent Strategy
