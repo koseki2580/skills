@@ -100,7 +100,7 @@ Before implementing:
 
 ```markdown
 ### [#step-3] — selection: "verify: e2e green"
-このverifyだとどのe2eテストが対象か分からない。
+Which e2e tests does this verify step cover? It's ambiguous.
 ```
 
 Treat the anchor (`#step-3`) as authoritative for locating context in the plan; the selection text disambiguates within long anchors; the body is the actual feedback.
