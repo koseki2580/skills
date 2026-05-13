@@ -1,8 +1,14 @@
 /* plan-comments.js — self-contained commenting overlay for HTML plan documents.
  *
- * Designed to be inlined into agents/human/<plan>.html via `<script>...</script>`.
+ * Designed to be inlined into agents/human/<plan>.html inside a script tag.
+ * Note: do NOT write a literal closing script tag anywhere in this file (not even
+ * in comments or string literals). The HTML parser will treat any such occurrence
+ * as the end of the surrounding script block when this file is inlined, breaking
+ * the overlay. If one is ever introduced, write it as `<\/script>` so JavaScript
+ * sees the same string but the HTML parser does not.
+ *
  * Zero dependencies. Persists comments in localStorage. All UI is rendered into
- * a `pc-root` container appended to <body> so it never conflicts with page CSS.
+ * a pc-root container appended to body so it never conflicts with page CSS.
  *
  * Anchor types:
  *   - id      : the user hovered an element whose id matches the configured
